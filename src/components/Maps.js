@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-// import SearchBox from "react-google-maps/lib/components/places/SearchBox";
-//const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
 
 const containerStyle = {
   display: 'flex',

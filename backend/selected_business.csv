@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 "business_id","name","address","city","state","type","statut","date_statut","latitude","longitude","x","y"
+=======
+business_id,name,address,city,state,type,statut,date_statut,latitude,longitude,x,y
+>>>>>>> 368b273ba66791f5b58afc815fa807d01337be73
 1099,"ANGLICAN CHURCH OF MONTREAL","99   Rue Bernard Ouest","Montréal","Québec, Canada","Organisme d'aide alimentaire","Ouvert",19931117,45.526209,-73.603195,296739.02,5042926.5
 1461,"CENTRE ESPOIR NOUVEAU","6225   Avenue Godfrey ","Montréal","Québec, Canada","Organisme d'aide alimentaire","Ouvert",19930209,45.467757,-73.62694,294873.97,5036433.31
 14456,"MIDNIGHT KITCHEN","3480  304 Rue McTavish ","Montréal","Québec, Canada","Organisme d'aide alimentaire","Ouvert",20110912,45.503192,-73.576817,298797.05,5040366.31
