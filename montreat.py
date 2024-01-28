@@ -236,5 +236,16 @@ if 'bad' in imp_keys:
 if 'good' in imp_keys or 'quality' in imp_keys:
   df = df[df['rating'] >= 4.5]
 
-df
+if df.empty:
+  print("No businesses found!")
+  exit()
+
+def condition(x):
+    if x.lower() in open_violations:
+        return 'Yes'
+    else:
+        return 'No'
+
+# Apply the condition to create a new column
+df['Warnings'] = df['name'].apply(condition)
 
