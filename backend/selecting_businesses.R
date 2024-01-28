@@ -1,3 +1,4 @@
+
 file <- read.csv("businesses.csv")
 uniqueType <- unique(file$type)
 print(uniqueType)
@@ -9,5 +10,5 @@ print(statut)
 statutToKeep <- c("Ouvert","En traitement")
 filtered_df <- filtered_df[filtered_df$statut %in% statutToKeep, ]
 
-write.csv(filtered_df, "selected_business.csv")
+write.table(filtered_df, "selected_business.csv", row.names = FALSE, sep=",", quote = FALSE)
 
