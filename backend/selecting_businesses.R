@@ -10,5 +10,5 @@ print(statut)
 statutToKeep <- c("Ouvert","En traitement")
 filtered_df <- filtered_df[filtered_df$statut %in% statutToKeep, ]
 
-write.table(filtered_df, "selected_business.csv", row.names = FALSE, sep=",", quote = FALSE)
+write.csv(filtered_df, "selected_business.csv", row.names = FALSE)
 
