@@ -12,10 +12,10 @@ const Backend = () => {
 
     return (
         <div>
-            <h1>Restaurant we recommand you</h1>
+            <h1>Restaurants we recommand you</h1>
             <ul>
                 {data.map((item, index) => (
-                    <li key={index}>{JSON.stringify(item)}</li>
+                    <li key={index}>{item["latitude"]}</li>
                 ))}
             </ul>
         </div>
