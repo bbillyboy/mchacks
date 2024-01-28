@@ -21,7 +21,6 @@ const App = () => {
           <Filters text="Warning" />
           <Filters text="Price" />
           <Filters text="Location" />
-          <Backend />
         </div>
         <div style={{ flex: 1 }}>
           <Maps />
