@@ -1,9 +1,16 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Style for the box */
 .box {
   border: 2px solid #000;
   padding: 5px;
-  margin: 20px;
-  width: 80%;
+  margin: 10px;
+  width: 250px;
   background-color: #DEEDDE;
 }
 
@@ -23,13 +30,6 @@
 
 .body {
   background-color: #29465B;
-}
-
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* Style for the main content area */
@@ -63,35 +63,12 @@
   width: 45%; /* Adjust width as needed */
 }
 
-.chatbox {
-  display: flex;
-  flex-direction: column;
-  height: 400px; /* Adjust height as needed */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow-y: auto; /* Enable scrolling */
+.querybox {
+  height: 25px; /* Adjust height as needed */
+  margin-top: 10px;
+  width: 80%;
 }
 
-.messages {
-  flex-grow: 1;
-  padding: 10px;
-}
-
-.message {
-  margin-bottom: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  max-width: 70%;
-}
-
-.message.user {
-  align-self: flex-end;
-  background-color: #007bff; /* User message color */
-  color: #fff;
-}
-
-.message.bot {
-  align-self: flex-start;
-  background-color: #f0f0f0; /* Bot message color */
-  color: #000;
+.button {
+  height:25px;
 }

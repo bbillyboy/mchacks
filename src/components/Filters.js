@@ -4,7 +4,7 @@ import "../index.css"
 
 function Filters(props){
 
-    if (props.text == "Size"){
+    if (props.text === "Size"){
         return(
             <div class="box">
             <h2>{props.text}</h2>
@@ -17,7 +17,7 @@ function Filters(props){
             </div>
         );
     }
-    else if (props.text == "Warning"){
+    else if (props.text === "Warning"){
         return(
             <div class="box">
             <h2>{props.text}</h2>
@@ -27,7 +27,7 @@ function Filters(props){
             </div>
         );
     }
-    else if (props.text == "Price"){
+    else if (props.text === "Price"){
         return(
             <div class="box">
             <h2>{props.text}</h2>
@@ -40,7 +40,7 @@ function Filters(props){
             </div>
         );
     }
-    else if (props.text == "Location"){
+    else if (props.text === "Location"){
         return(
             <div class="box">
             <h2>{props.text}</h2>

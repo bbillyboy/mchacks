@@ -2,6 +2,14 @@
 import React, { useState } from 'react';
 import '../index.css';
 
+const containerStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  width: '900px',
+  height: '500px',
+  border: 'solid'
+};
+
 const Querybox = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
@@ -21,23 +29,19 @@ const Querybox = () => {
   };
 
   return (
-    <div className="querybox">
-      <div className="messages">
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
-            {message.text}
-          </div>
-        ))}
-      </div>
+    <div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Type a message..."
+          placeholder="Write your query..."
           value={inputValue}
           onChange={handleInputChange}
+          class = "querybox"
         />
-        <button type="submit">Send</button>
+        <button type="submit" class="button">Send</button>
       </form>
+      <br></br>
+      <p class = "Query Response"></p>
     </div>
   );
 };

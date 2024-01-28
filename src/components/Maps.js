@@ -1,17 +1,20 @@
 import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+// import SearchBox from "react-google-maps/lib/components/places/SearchBox";
+//const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
 
 const containerStyle = {
   display: 'flex',
   flexDirection: 'row',
-  width: '1000px',
+  width: '900px',
   height: '500px',
-  marginLeft: '50px', // Adjust the margin as needed
+  marginLeft: '0px',
+  marginRight: '200px', // Adjust the margin as needed
   border: 'solid'
 };
 
 const mapStyle = {
-  flex: 1,
+  width: '100%',
   minheight: '100%',
 };
 
@@ -44,7 +47,6 @@ function Maps() {
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null)
   }, [])
-
   return isLoaded ? (
     <div style={containerStyle}>
       <GoogleMap
@@ -54,6 +56,8 @@ function Maps() {
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
+        <Marker position={(center)} />
+        <Marker position={{ lat: -25.363, lng: 131.044 }} />
         {/* Child components, such as markers, info windows, etc. */}
         <></>
       </GoogleMap>
