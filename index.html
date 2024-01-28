@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Upload</title>
+</head>
+<body>
+    <h1>CSV Upload and Processing</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        // form submission 
+        document.querySelector('form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                document.getElementById('result').innerText = 'Error: ' + data.error;
+            } else {
+                document.getElementById('result').innerText = 'Result: ' + JSON.stringify(data.result);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@ function FooterBar(){
         </div>
         <div class="footer-right">
             <h2>Our team:</h2>
-            <p>Member1, Member2, Member3, Member4</p>
+            <p>Justin Bellavance, Amir Dinari, Thibault Maumy, Ada Tur</p>
         </div>
       </div>
     </footer>

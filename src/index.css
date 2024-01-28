@@ -12,6 +12,7 @@
   margin: 10px;
   width: 250px;
   background-color: #DEEDDE;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /* Style for the title */
@@ -26,6 +27,7 @@
   margin: 20px;
   color: #DEEDDE;
   text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .body {
@@ -43,6 +45,7 @@
   color: #fff; /* Text color */
   padding: 20px; /* Padding around content */
   text-align: center; /* Center align text */
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /* Style for the footer container */
@@ -69,6 +72,32 @@
   width: 80%;
 }
 
+<<<<<<< HEAD
 .button {
   height:25px;
+=======
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #007bff; /* User message color */
+  color: #fff;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #f0f0f0; /* Bot message color */
+  color: #000;
 }
