@@ -11,6 +11,7 @@ def get_data():
 
 @app.route('/api/data')
 def my_profile():
-    restaurants = pd.read_csv("businesses.csv", usecols=["latitude","longitude"])
+    restaurants = pd.read_csv("selected_businesses.csv", usecols=["latitude","longitude"])
     restaurants_json = restaurants.to_json(orient='records')
     return restaurants_json
+
