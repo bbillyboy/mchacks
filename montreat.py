@@ -224,27 +224,17 @@ if __name__ == "__main__":
 
         df = df.append(info, ignore_index=True)
 
-cuisines = ['modavie', 'italian', 'american', 'indian', 'chinese', 'japanese', 'mediterranean', 'armenian', 'turkish', 'greek', 'french'
-                'german', 'british', 'coffee', 'dessert', 'ethiopean', 'mexican', 'argentinian', 'canadian', 'patisserie', 'boulangerie']
+if 'cheap' in imp_keys:
+  df = df[df['price_level'] == 1]
 
-return_df = pd.DataFrame()
+if 'fancy' in imp_keys or 'expensive' in imp_keys:
+  df = df[df['price_level'] == 3]
 
-def common_elements(list1, list2):
-    result = []
-    for element in list1:
-        if element in list2:
-            result.append(element)
-    return result
+if 'bad' in imp_keys:
+  df = df[df['rating'] <= 2]
 
-comm = common_elements(cuisines, imp_keys)
-print(comm)
-print(imp_keys)
+if 'good' in imp_keys or 'quality' in imp_keys:
+  df = df[df['rating'] >= 4.5]
 
-for row in df.iterrows():
-  if comm != [] and (comm[0] in row[1]["name"].lower() or comm[0] in row[1]["cuisine"]):
-    return_df.append(row[1])
-  elif comm == []:
-    return_df.append(df)
-
-return_df
+df
 
