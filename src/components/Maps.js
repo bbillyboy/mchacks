@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 // import SearchBox from "react-google-maps/lib/components/places/SearchBox";
 //const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
@@ -29,6 +29,15 @@ const center = {
 };
 
 function Maps() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+      fetch('/api/data')
+          .then(response => response.json())
+          .then(data => setData(data))
+          .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyBYWMsFh2HFK_2D4Lvf5H9_vPrKKKOz6q8"
@@ -56,9 +65,14 @@ function Maps() {
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
-        <Marker position={(center)} />
-        <Marker position={{ lat: -25.363, lng: 131.044 }} />
-        {/* Child components, such as markers, info windows, etc. */}
+        {data.map((item, index) => {
+          return (
+            <Marker
+              key={index}
+              position={{ lat: item[0] , lng: item[1] }}
+            />
+          );
+        })}
         <></>
       </GoogleMap>
       <div style={otherComponentStyle}>
