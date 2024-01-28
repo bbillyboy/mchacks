@@ -46,7 +46,7 @@ function Maps() {
   const [map, setMap] = React.useState(null)
 
   const onLoad = React.useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+
     map.setCenter(center);
     map.setZoom(10);
 
@@ -69,7 +69,7 @@ function Maps() {
           return (
             <Marker
               key={index}
-              position={{ lat: item[0] , lng: item[1] }}
+              position={{ lat: item["latitude"] , lng: item["longitude"] }}
             />
           );
         })}

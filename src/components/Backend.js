@@ -4,7 +4,7 @@ const Backend = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('/api/csv')
+        fetch('/api/data')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching data:', error));
@@ -12,10 +12,10 @@ const Backend = () => {
 
     return (
         <div>
-            <h1>Restaurant we recommand you</h1>
+            <h1>Restaurants we recommand you</h1>
             <ul>
                 {data.map((item, index) => (
-                    <li key={index}>{JSON.stringify(item)}</li>
+                    <li key={index}>{item["latitude"]}</li>
                 ))}
             </ul>
         </div>
