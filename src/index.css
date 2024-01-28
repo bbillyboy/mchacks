@@ -1,0 +1,97 @@
+/* Style for the box */
+.box {
+  border: 2px solid #000;
+  padding: 5px;
+  margin: 20px;
+  width: 80%;
+  background-color: #DEEDDE;
+}
+
+/* Style for the title */
+.box-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 80px;
+  padding: 20px;
+  margin: 20px;
+  color: #DEEDDE;
+  text-align: center;
+}
+
+.body {
+  background-color: #29465B;
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the main content area */
+.content {
+  padding: 20px;
+}
+
+/* Style for the footer */
+.footer {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding around content */
+  text-align: center; /* Center align text */
+}
+
+/* Style for the footer container */
+.footer .container {
+  max-width: 1200px; /* Maximum width of content */
+  margin: 0 auto; /* Center align content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the divs */
+}
+
+/* Style for the left div in the footer */
+.footer .container .footer-left {
+  width: 45%; /* Adjust width as needed */
+}
+
+/* Style for the right div in the footer */
+.footer .container .footer-right {
+  width: 45%; /* Adjust width as needed */
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Adjust height as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.messages {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #007bff; /* User message color */
+  color: #fff;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #f0f0f0; /* Bot message color */
+  color: #000;
+}
