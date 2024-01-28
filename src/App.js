@@ -19,6 +19,7 @@ const App = () => {
           <Filters text="Price" />
           <Filters text="Location" />
           <PrintA />
+          <Backend />
         </div>
         <div style={{ flex: 1 }}>
           <Maps />
