@@ -17,6 +17,10 @@ const App = () => {
           <Filters text="Warning" />
           <Filters text="Price" />
           <Filters text="Location" />
+<<<<<<< HEAD
+=======
+          <Backend />
+>>>>>>> de1d5aa1cfe5f68afca8e793d0b21e074e347ced
         </div>
         <div style={{ flex: 1 }}>
           <Maps />
